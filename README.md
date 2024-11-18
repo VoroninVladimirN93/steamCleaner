@@ -1,10 +1,18 @@
-# steamCleaner
-Скрипт, который позволяет очищать папки /downloads, /temp, /workshop во всех библиотеках Steam
-Для компиляции с помощью NODE.JS можно использовать команду
-pkg deleteFolders.js --targets node18-win-x64 --output deleteFolders.exe
-Последняя версия скрипта (v2) автоматически закрывает Steam, удаляет указанные папки, снова запускает Steam и ждет нажатия любой клавиши перед закрытием.
-Папки можно добавить в массив directories =[]
-В версии для сборки на Electron добавлен автоматический поиск всех файлов указанных в файле libraryfolders.vdf
+# SteamCleaner
 
-Для установки Electron 
-npm install --save-dev electron
+**SteamCleaner** — это скрипт для очистки папок `/downloads`, `/temp`, `/workshop` во всех библиотеках Steam. 
+
+## Возможности
+
+- Автоматическое закрытие Steam перед удалением папок.
+- Очистка указанных папок и перезапуск Steam.
+- Ожидание нажатия клавиши перед завершением работы.
+- Возможность добавления папок для очистки в массив `directories = []`.
+- Автоматический поиск всех папок, указанных в файле `libraryfolders.vdf` (в версии для Electron).
+
+## Компиляция с помощью Node.js
+
+Для компиляции скрипта в `.exe` можно использовать следующую команду:
+
+```bash
+pkg deleteFolders.js --targets node18-win-x64 --output deleteFolders.exe
