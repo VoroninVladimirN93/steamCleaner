@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Cleaner</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для кнопки */
+        #clean-btn {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 30px; /* Скруглённые углы */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #clean-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
+        }
+
+        #clean-btn:active {
+            background-color: #004085;
+        }
+
+        /* Стили для вывода информации */
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Steam Cleaner</h1>
+    <button id="clean-btn">Начать очистку</button>
+    <div id="output"></div>
+    <script src="renderer.js"></script>
+</body>
+</html>
